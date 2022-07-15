@@ -41,6 +41,10 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
             </Box>
         )
         )}
+
+        {!data.length && (
+            <p>Body Part not found.</p>
+        )}
     </ScrollMenu>
   )
 }

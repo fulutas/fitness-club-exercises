@@ -6,8 +6,8 @@ import SearchExercises from  '../components/SearchExercises'
 import HeroBanner from  '../components/HeroBanner'
 
 const Home = () => {
-  const [bodyPart, setBodyPart] = useState('all'); // tekil
   const [exercises, setExercises] = useState([]);
+  const [bodyPart, setBodyPart] = useState('all'); // tekil
 
   return (
     <Box>
@@ -17,9 +17,10 @@ const Home = () => {
       bodyPart={bodyPart} 
       setBodyPart={setBodyPart} />
       <Exercises 
+      exercises={exercises} 
       setExercises={setExercises}
       bodyPart={bodyPart} 
-      setBodyPart={setBodyPart} />
+      />
     </Box>
   )
 }

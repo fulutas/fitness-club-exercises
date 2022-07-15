@@ -10,7 +10,7 @@ import SimilarExercises from '../components/SimilarExercises'
 const ExerciseDetail = () => {
 
   const [exerciseDetail, setExerciseDetail] = useState({});
-  const [exerciseVideos, seExerciseVideos] = useState([]);
+  const [exerciseVideos, setExerciseVideos] = useState([]);
 
   const { id } = useParams()
 

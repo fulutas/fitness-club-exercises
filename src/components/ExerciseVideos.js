@@ -1,7 +1,8 @@
 import React from 'react'
-import { Typography, Stack, Box } from '@mui/material'
+import { Typography, Stack, Box, Button } from '@mui/material'
 
 const ExerciseVideos = ({exerciseVideos, name}) => {
+
 
   if(!exerciseVideos.length) return 'Loading...'
 
@@ -37,6 +38,16 @@ const ExerciseVideos = ({exerciseVideos, name}) => {
               </Box>
             </a>
           ))}
+      </Stack>
+      <Stack display='flex' justifyContent='center' alignItems='center' direction="row" mt='3rem'>
+        <a style={{ textDecoration : 'none' }}
+        href={`https://www.youtube.com/results?search_query=${name}`}
+        target='_blank'
+        > 
+          <Typography style={{ borderRadius : '10px', backgroundColor : '#F0E3E3', padding : '0.7rem', cursor : 'pointer', color : '#000' }}>
+             Watch more workout videos on youtube
+          </Typography> 
+        </a>
       </Stack>
     </Box>
   )

@@ -14,7 +14,7 @@ const Footer = () => {
         Fitness Club
         </Typography>
         </Stack>
-        <Typography variant='h6' pb='40px' mt='20px' color='black'>
+        <Typography variant='h7' pb='40px' mt='20px' color='black'>
           <a target='_blank' href='https://github.com/fulutas/fitness-club-exercises' style={{ textDecoration : 'none', display : 'flex', justifyContent : 'center', alignItems : 'center', color :'gray'}}>
             <GitHubIcon style={{ marginBottom : '4px', marginRight : '7px'}} /> Github
           </a>

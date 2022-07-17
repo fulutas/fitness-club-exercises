@@ -4,6 +4,7 @@ import { Box, Stack, Typography } from "@mui/material";
 
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import ExerciseCard from "./ExerciseCard";
+import Loader from './Loader'
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
@@ -51,6 +52,10 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         {currentExercises.map((exercise, index) => (
           <ExerciseCard key={index} exercise={exercise} />
         ))}
+
+        {!currentExercises.length && (
+            <Loader />
+        )}    
       </Stack>
       <Stack mt="100px" alignItems="center">
         {exercises.length > 9 && (  

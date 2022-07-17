@@ -63,7 +63,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         onChange={(e) => setSearch(e.target.value.toLowerCase())}
         placeholder='Search Exercises'
         type='text'
-
+        tabIndex='1'
         />
         <Button className='search-btn' sx={{
           bgcolor : '#ff2625', 

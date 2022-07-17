@@ -9,11 +9,11 @@ const ExerciseVideos = ({exerciseVideos, name}) => {
   console.log(exerciseVideos)
 
   return (
-    <Box sx={{ marginTop : { lg : '200px', xs : '20px'}}} p='20px'>
+    <Box sx={{ marginTop : { lg : '50px', xs : '20px'}}} p='20px'>
       <Typography variant='h4' mb='33px'>
           Watch <span style={{ color : '#ff2625', textTransform : 'capitalize'}}>{name}</span> exercise videos
       </Typography>
-      <Stack justifyContent='flex-start' flexWrap='wrap' alignItems='center' sx={{ flexDirection : { lg : 'row'}, gap : { lg : '110px', xs : '0'}}}>
+      <Stack justifyContent='flex-start' flexWrap='wrap' alignItems='center' sx={{ flexDirection : { lg : 'row'}, gap : { lg : '50px 110px', xs : '0'}}}>
           {exerciseVideos?.slice(0,6).map((item,index) => (
             <a
             key={index}
@@ -22,7 +22,7 @@ const ExerciseVideos = ({exerciseVideos, name}) => {
             target='_blank'
             rel='noreferrer'
             >
-              <img src={item.video.thumbnails[0].url} alt={item.video.title} style={{ borderRadius : '10px'}} />
+              <img src={item.video.thumbnails[0].url} alt={item.video.title} style={{ borderRadius : '10px', maxHeight : '220px', objectFit : 'cover'}} />
               <Box>
                 <Typography variant='h6' color='#000'>
                   {item.video.title}
@@ -45,7 +45,7 @@ const ExerciseVideos = ({exerciseVideos, name}) => {
         target='_blank'
         > 
           <Typography style={{ borderRadius : '10px', backgroundColor : '#F0E3E3', padding : '0.7rem', cursor : 'pointer', color : '#000' }}>
-             Watch more workout videos on youtube
+             Watch more workout videos on YouTube
           </Typography> 
         </a>
       </Stack>
